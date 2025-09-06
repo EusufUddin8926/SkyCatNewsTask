@@ -1,6 +1,7 @@
 package org.task.skycatnews.features.newslist.presentation.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Divider
@@ -25,6 +26,9 @@ fun StoryItem(
     Row(
         modifier = modifier
             .fillMaxWidth()
+            .clickable{
+                onClick()
+            }
             .padding(horizontal = 12.dp, vertical =4.dp)
     ) {
         // Thumbnail Placeholder

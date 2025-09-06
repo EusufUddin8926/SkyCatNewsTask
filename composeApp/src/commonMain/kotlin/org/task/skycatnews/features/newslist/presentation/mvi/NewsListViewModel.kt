@@ -28,7 +28,7 @@ class NewsListViewModel(
     private fun loadNews() {
         coroutineScope.launch {
             state = NewsListState.Loading
-            delay(1000)
+            delay(400)
             try {
                 val newsItems = getNewsListUseCase()
                 state = NewsListState.Success(newsItems)

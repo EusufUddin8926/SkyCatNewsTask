@@ -5,8 +5,11 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import org.koin.compose.viewmodel.koinViewModel
+import org.koin.core.parameter.parametersOf
 import org.task.skycatnews.features.newslist.presentation.mvi.NewsListViewModel
 import org.task.skycatnews.features.newslist.presentation.ui.screen.NewsListScreen
+import org.task.skycatnews.features.story_details.presentation.mvi.StoryDetailViewModel
+import org.task.skycatnews.features.story_details.presentation.ui.screen.StoryDetailScreen
 
 @Composable
 fun AppNavigation() {
@@ -32,7 +35,7 @@ fun AppNavigation() {
             )
         }
 
-       /* composable(
+        composable(
             route = Route.StoryDetail.route,
             arguments = Route.StoryDetail.arguments
         ) { backStackEntry ->
@@ -49,7 +52,7 @@ fun AppNavigation() {
             )
         }
 
-        composable(
+       /* composable(
             route = Route.WebView.route,
             arguments = Route.WebView.arguments
         ) { backStackEntry ->

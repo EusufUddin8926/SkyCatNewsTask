@@ -1,9 +1,13 @@
 package org.task.skycatnews.features.newslist.presentation.ui.components
 
 import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material3.Divider
 import androidx.compose.material3.DividerDefaults
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.MaterialTheme
@@ -32,12 +36,11 @@ fun WebLinkItem(
         // Gray box placeholder (same as StoryItem)
         Box(
             modifier = Modifier
-                .size(44.dp)
-                .background(color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f))
-                .clip(RoundedCornerShape(8.dp)),
+                .clip(RoundedCornerShape(4.dp))
+                .size(44.dp).background(color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.4f)),
             contentAlignment = Alignment.Center
-        ) {
-            // You could add a different icon or indicator for weblinks if needed
+        ){
+
         }
 
         Column(modifier = Modifier.weight(1f).padding(start = 12.dp)) {
