@@ -22,9 +22,13 @@
     *   Build menu -> Build Bundle(s) / APK(s) -> Build APK(s)
     *   OR `./gradlew :composeApp:assembleRelease`
     *   Output: `composeApp/build/outputs/apk/release/`
-    *   Download pre-built APK: [Download Link](https://drive.google.com/drive/folders/1Z8jHIb6D9rICGVhPlB_MKG9Gdo1C5xyW?usp=sharing)
+    *   Download pre-built APK: [cat_news.apk](https://github.com/EusufUddin8926/SkyCatNewsTask/blob/master/cat_news.apk?raw=true)
 *   **Getting Started (iOS)**:
     1.  From project root (`/Users/mdeusufuddin/Downloads/Sky Cat News`): `./gradlew :composeApp:podInstall`
     2.  Open `iosApp/iosApp.xcworkspace` in Xcode.
     3.  Select target & `iosApp` scheme, then build & run.
+*   **Contributing**: Standard fork, branch, commit, push, PR workflow.
+*   **License**: MIT (requires `LICENSE.md` file).
+
+---
 
