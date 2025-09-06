@@ -10,6 +10,8 @@ import org.task.skycatnews.features.newslist.presentation.mvi.NewsListViewModel
 import org.task.skycatnews.features.newslist.presentation.ui.screen.NewsListScreen
 import org.task.skycatnews.features.story_details.presentation.mvi.StoryDetailViewModel
 import org.task.skycatnews.features.story_details.presentation.ui.screen.StoryDetailScreen
+import org.task.skycatnews.features.web_screen.presentation.WebLinkViewModel
+import org.task.skycatnews.features.web_screen.presentation.WebViewScreen
 
 @Composable
 fun AppNavigation() {
@@ -52,19 +54,21 @@ fun AppNavigation() {
             )
         }
 
-       /* composable(
+        composable(
             route = Route.WebView.route,
             arguments = Route.WebView.arguments
         ) { backStackEntry ->
             val encodedUrl = backStackEntry.arguments?.getString("url") ?: ""
             val url = encodedUrl.decodeFromRoute()
+            val viewModel = koinViewModel<WebLinkViewModel>()
 
             WebViewScreen(
+                viewModel = viewModel,
                 url = url,
                 onBackClick = {
                     navController.popBackStack()
                 }
             )
-        }*/
+        }
     }
 }

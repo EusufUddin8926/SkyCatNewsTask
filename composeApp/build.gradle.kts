@@ -71,6 +71,8 @@ kotlin {
             implementation(libs.kotlinx.datetime)
             implementation(libs.kotlinX.coroutines)
             implementation(libs.material.icons.extended)
+
+            implementation("io.github.kevinnzou:compose-webview-multiplatform:1.8.0")
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)

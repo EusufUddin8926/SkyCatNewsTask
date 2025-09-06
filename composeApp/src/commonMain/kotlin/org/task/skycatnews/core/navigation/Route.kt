@@ -58,21 +58,3 @@ fun String.decodeFromRoute(): String {
         .replace("_percent_", "%")
         .replace("_hash_", "#")
 }
-
-// Helper function to extract story ID from route
-fun String.getStoryId(): String? {
-    return if (this.startsWith("storyDetail/")) {
-        this.removePrefix("storyDetail/").takeIf { it.isNotBlank() }
-    } else {
-        null
-    }
-}
-
-// Helper function to extract URL from route
-fun String.getUrl(): String? {
-    return if (this.startsWith("webView/")) {
-        this.removePrefix("webView/").decodeFromRoute().takeIf { it.isNotBlank() }
-    } else {
-        null
-    }
-}
