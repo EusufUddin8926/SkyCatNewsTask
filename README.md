@@ -27,8 +27,7 @@
     1.  From project root (`/Users/mdeusufuddin/Downloads/Sky Cat News`): `./gradlew :composeApp:podInstall`
     2.  Open `iosApp/iosApp.xcworkspace` in Xcode.
     3.  Select target & `iosApp` scheme, then build & run.
-*   **Contributing**: Standard fork, branch, commit, push, PR workflow.
-*   **License**: MIT (requires `LICENSE.md` file).
+
 
 ---
 
