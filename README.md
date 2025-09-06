@@ -1,35 +1,29 @@
-This is a Kotlin Multiplatform project targeting Android, iOS.
+# Sky Cat News 🐱📰
 
-* [/composeApp](./composeApp/src) is for code that will be shared across your Compose Multiplatform applications.
-  It contains several subfolders:
-  - [commonMain](./composeApp/src/commonMain/kotlin) is for code that’s common for all targets.
-  - Other folders are for Kotlin code that will be compiled for only the platform indicated in the folder name.
-    For example, if you want to use Apple’s CoreCrypto for the iOS part of your Kotlin app,
-    the [iosMain](./composeApp/src/iosMain/kotlin) folder would be the right place for such calls.
-    Similarly, if you want to edit the Desktop (JVM) specific part, the [jvmMain](./composeApp/src/jvmMain/kotlin)
-    folder is the appropriate location.
-
-* [/iosApp](./iosApp/iosApp) contains iOS applications. Even if you’re sharing your UI with Compose Multiplatform,
-  you need this entry point for your iOS app. This is also where you should add SwiftUI code for your project.
-
-### Build and Run Android Application
-
-To build and run the development version of the Android app, use the run configuration from the run widget
-in your IDE’s toolbar or build it directly from the terminal:
-- on macOS/Linux
-  ```shell
-  ./gradlew :composeApp:assembleDebug
-  ```
-- on Windows
-  ```shell
-  .\gradlew.bat :composeApp:assembleDebug
-  ```
-
-### Build and Run iOS Application
-
-To build and run the development version of the iOS app, use the run configuration from the run widget
-in your IDE’s toolbar or open the [/iosApp](./iosApp) directory in Xcode and run it from there.
-
----
-
-Learn more about [Kotlin Multiplatform](https://www.jetbrains.com/help/kotlin-multiplatform-dev/get-started.html)…
+*   **Project**: Sky Cat News 🐱📰 - A Compose Multiplatform news app for Android & iOS.
+*   **Core Features**: Browse articles, view featured stories, read story details.
+*   **Tech Stack**:
+    *   Kotlin Multiplatform & Compose Multiplatform
+    *   Coroutines, Ktor, Kotlinx Serialization (assumed)
+    *   MVI Architecture
+    *   Gradle, CocoaPods
+*   **Recommended Environment**:
+    *   Kotlin: 2.2.0
+    *   AGP: 8.10.1
+    *   Gradle: 8.14.3
+    *   JDK: 17
+    *   Latest Android Studio & Xcode
+    *   Latest CocoaPods
+*   **Getting Started (Android)**:
+    1.  Open in Android Studio, sync Gradle.
+    2.  Select `composeApp` run config.
+    3.  Choose device/emulator & run.
+*   **Generating Android APK**:
+    *   Build menu -> Build Bundle(s) / APK(s) -> Build APK(s)
+    *   OR `./gradlew :composeApp:assembleRelease`
+    *   Output: `composeApp/build/outputs/apk/release/`
+    *   Download pre-built APKs: [Google Drive folder](https://drive.google.com/drive/folders/15Fe8u_ae4Vgu4aqleJoRRxnQ0RQZhJoA?usp=sharing)
+*   **Getting Started (iOS)**:
+    1.  From project root (`/Users/mdeusufuddin/Downloads/Sky Cat News`): `./gradlew :composeApp:podInstall`
+    2.  Open `iosApp/iosApp.xcworkspace` in Xcode.
+    3.  Select target & `iosApp` scheme, then build & run.
