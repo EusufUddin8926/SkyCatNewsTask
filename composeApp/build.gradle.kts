@@ -6,6 +6,8 @@ plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.composeMultiplatform)
     alias(libs.plugins.composeCompiler)
+    alias(libs.plugins.jetbrains.kotlin.serialization)
+    alias(libs.plugins.ksp)
 }
 
 kotlin {
@@ -29,6 +31,10 @@ kotlin {
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
+
+            implementation(libs.koin.android)
+            implementation(libs.koin.androidx.compose)
+            implementation(libs.ktor.client.okhttp)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -40,14 +46,38 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
-            implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1")
-            implementation("io.insert-koin:koin-core:3.4.3")
-            implementation("io.ktor:ktor-client-core:2.3.3")
-            implementation("io.ktor:ktor-client-content-negotiation:2.3.3")
-            implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.3")
+            implementation(libs.jetbrains.compose.navigation)
+            implementation(libs.kotlinx.serialization.json)
+
+            implementation(libs.koin.compose)
+            implementation(libs.koin.compose.viewmodel)
+            api(libs.koin.core)
+
+            api(libs.ktor.client.core)
+            implementation(libs.bundles.ktor)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(libs.ktor.client.logging)
+
+            api(libs.ktor.client.core)
+            implementation(libs.bundles.ktor)
+            implementation(libs.ktor.client.content.negotiation)
+            implementation(libs.ktor.serialization.kotlinx.json)
+            implementation(libs.ktor.client.logging)
+
+            implementation(libs.bundles.coil)
+
+            api(libs.napier)
+            implementation(libs.kotlinx.datetime)
+            implementation(libs.kotlinX.coroutines)
+            implementation(libs.material.icons.extended)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
+        }
+
+        nativeMain.dependencies {
+            implementation(libs.ktor.client.darwin)
         }
     }
 }
