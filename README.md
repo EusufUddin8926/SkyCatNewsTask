@@ -22,7 +22,7 @@
     *   Build menu -> Build Bundle(s) / APK(s) -> Build APK(s)
     *   OR `./gradlew :composeApp:assembleRelease`
     *   Output: `composeApp/build/outputs/apk/release/`
-    *   Download pre-built APKs: [Google Drive folder](https://drive.google.com/file/d/1BBHOCOMmpOoueh5BQ_gwVGGyGsh7Lz2p/view?usp=sharing)
+    *   Download pre-built APKs: [Google Drive folder]((https://drive.google.com/drive/folders/1i9AMi1UVk2hPxdJ9xxUfzO4rllkU6Lt9?usp=sharing))
 *   **Getting Started (iOS)**:
     1.  From project root (`/Users/mdeusufuddin/Downloads/Sky Cat News`): `./gradlew :composeApp:podInstall`
     2.  Open `iosApp/iosApp.xcworkspace` in Xcode.
