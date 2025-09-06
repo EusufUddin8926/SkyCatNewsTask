@@ -1,10 +1,8 @@
-// WebViewScreen.kt (in commonMain)
-package org.task.skycatnews.features.web_screen.presentation
-
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -20,9 +18,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.kevinnzou.compose.webview.WebView
-import com.kevinnzou.compose.webview.rememberWebViewState
+import com.multiplatform.webview.web.WebView
 import com.multiplatform.webview.web.rememberWebViewState
+import org.task.skycatnews.features.web_screen.viewmodel.WebLinkViewModel
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -45,7 +44,7 @@ fun WebViewScreen(
                 title = { Text("Sky Cat News") },
                 navigationIcon = {
                     IconButton(onClick = onBackClick) {
-                        Icon(Icons.Default.ArrowBack, contentDescription = "Back")
+                        Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back")
                     }
                 }
             )
@@ -75,27 +74,8 @@ fun WebViewScreen(
 
                     WebView(
                         state = webViewState,
-                        modifier = Modifier.fillMaxSize(),
-                        onCreated = { webView ->
-                            // Platform-specific configuration
-                            when {
-                                // Android configuration
-                                Platform.isAndroid() -> {
-                                    webView.settings.javaScriptEnabled = true
-                                    webView.settings.domStorageEnabled = true
-                                    webView.settings.setSupportZoom(true)
-                                    webView.settings.builtInZoomControls = true
-                                    webView.settings.displayZoomControls = false
-                                }
-                                // iOS configuration
-                                Platform.isIOS() -> {
-                                    // iOS-specific configuration if needed
-                                }
-                            }
-                        },
-                        onLoading = { loading ->
-                            // Handle loading state if needed
-                        }
+                        modifier = Modifier.fillMaxSize()
+                        // Let the library handle default configuration
                     )
                 }
 
@@ -109,17 +89,5 @@ fun WebViewScreen(
                 }
             }
         }
-    }
-}
-
-// Platform detection utility
-object Platform {
-    fun isAndroid(): Boolean {
-        return System.getProperty("java.vm.name") == "Dalvik" ||
-                System.getProperty("java.vm.name") == "ART"
-    }
-
-    fun isIOS(): Boolean {
-        return !isAndroid()
     }
 }

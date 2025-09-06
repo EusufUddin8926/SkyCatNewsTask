@@ -6,6 +6,7 @@ import org.koin.core.module.Module
 import org.koin.dsl.KoinAppDeclaration
 import org.task.skycatnews.features.newslist.di.newsListModule
 import org.task.skycatnews.features.story_details.di.storyDetailModule
+import org.task.skycatnews.features.web_screen.di.webLinkModule
 
 expect val initTargetModule: Module
 
@@ -15,7 +16,8 @@ fun initKoin(enableNetworkLogs: Boolean = true, config: KoinAppDeclaration? = nu
         modules(
             initTargetModule,
             newsListModule,
-            storyDetailModule
+            storyDetailModule,
+            webLinkModule
         )
     }
 }

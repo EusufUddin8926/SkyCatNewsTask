@@ -1,6 +1,7 @@
 package org.task.skycatnews.features.newslist.presentation.ui.components
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -31,6 +32,7 @@ fun WebLinkItem(
     Row(
         modifier = modifier
             .fillMaxWidth()
+            .clickable { onClick() }
             .padding(horizontal = 12.dp, vertical = 4.dp)
     ) {
         // Gray box placeholder (same as StoryItem)

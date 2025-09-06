@@ -44,6 +44,5 @@ fun NewsItemDto.toDomain(): NewsListItem? {
         is StoryDto -> this.toDomain()
         is WebLinkDto -> this.toDomain()
         is AdvertDto -> this.toDomain()
-        else -> null
     }
 }

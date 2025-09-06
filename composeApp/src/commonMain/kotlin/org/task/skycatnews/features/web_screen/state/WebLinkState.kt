@@ -1,4 +1,4 @@
-package org.task.skycatnews.features.web_screen.presentation
+package org.task.skycatnews.features.web_screen.state
 
 data class WebLinkState(
     val url: String = "",

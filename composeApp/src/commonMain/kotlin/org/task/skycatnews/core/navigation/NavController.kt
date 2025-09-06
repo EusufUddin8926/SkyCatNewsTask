@@ -1,5 +1,6 @@
 package org.task.skycatnews.core.navigation
 
+import WebViewScreen
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -10,8 +11,7 @@ import org.task.skycatnews.features.newslist.presentation.mvi.NewsListViewModel
 import org.task.skycatnews.features.newslist.presentation.ui.screen.NewsListScreen
 import org.task.skycatnews.features.story_details.presentation.mvi.StoryDetailViewModel
 import org.task.skycatnews.features.story_details.presentation.ui.screen.StoryDetailScreen
-import org.task.skycatnews.features.web_screen.presentation.WebLinkViewModel
-import org.task.skycatnews.features.web_screen.presentation.WebViewScreen
+import org.task.skycatnews.features.web_screen.viewmodel.WebLinkViewModel
 
 @Composable
 fun AppNavigation() {

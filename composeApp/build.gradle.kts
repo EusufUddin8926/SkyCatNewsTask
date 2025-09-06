@@ -34,7 +34,6 @@ kotlin {
 
             implementation(libs.koin.android)
             implementation(libs.koin.androidx.compose)
-            implementation(libs.ktor.client.okhttp)
         }
         commonMain.dependencies {
             implementation(compose.runtime)
@@ -53,33 +52,19 @@ kotlin {
             implementation(libs.koin.compose.viewmodel)
             api(libs.koin.core)
 
-            api(libs.ktor.client.core)
-            implementation(libs.bundles.ktor)
-            implementation(libs.ktor.client.content.negotiation)
-            implementation(libs.ktor.serialization.kotlinx.json)
-            implementation(libs.ktor.client.logging)
 
-            api(libs.ktor.client.core)
-            implementation(libs.bundles.ktor)
-            implementation(libs.ktor.client.content.negotiation)
-            implementation(libs.ktor.serialization.kotlinx.json)
-            implementation(libs.ktor.client.logging)
-
-            implementation(libs.bundles.coil)
-
-            api(libs.napier)
             implementation(libs.kotlinx.datetime)
             implementation(libs.kotlinX.coroutines)
             implementation(libs.material.icons.extended)
 
-            implementation("io.github.kevinnzou:compose-webview-multiplatform:1.8.0")
+            implementation(libs.compose.webview.multiplatform)
         }
         commonTest.dependencies {
             implementation(libs.kotlin.test)
         }
 
         nativeMain.dependencies {
-            implementation(libs.ktor.client.darwin)
+
         }
     }
 }
